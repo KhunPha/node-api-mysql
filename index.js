@@ -9,6 +9,12 @@ app.use(cors({
     origin: "*"
 }))
 
+app.use("/home", (req, res) => {
+    res.json({
+        message: "Home"
+    })
+})
+
 app.get("/", (req, res)=>{
     res.json({
         message: "Home"
@@ -19,7 +25,7 @@ const User = require("./src/routes/User.route")
 
 User(app)
 
-const port = 8080;
+const port = 9002;
 app.listen(port, (req, res)=>{
-    console.log("bhhxcanmyjj5hak805p8-mysql.services.clever-cloud.com")
+    console.log("http://localhost:" + port)
 })
