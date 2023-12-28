@@ -9,12 +9,6 @@ app.use(cors({
     origin: "*"
 }))
 
-app.use("/home", (req, res) => {
-    res.json({
-        message: "Home"
-    })
-})
-
 app.get("/", (req, res)=>{
     res.json({
         message: "Home"
